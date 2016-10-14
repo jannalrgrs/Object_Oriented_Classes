@@ -6,36 +6,29 @@ import java.util.Date;
 public class Employee { // we are calling the main elsewhere	
 	
 	private float Salary; //all variables are set to default values
-	
 	private String firstName;
-	
 	private String lastName;
-	
 	private String jobTitle;
-	
 	private String id;
-	
 	private LocalDateTime dateHired; //gets Null as an exception
-	
-	//Constructor:
+
 	public Employee ()
 	{
-		Salary = 10;
-		jobTitle = "Waiter";
+		Salary = 10000000;
+		jobTitle = "The Boss";
 		dateHired = LocalDateTime.now();
-		firstName = lastName = "";
-		
+		firstName = "Janna"; lastName = "Rogers";
 		id = "0000000000";
+		
 	}
-	//Constructor that has parameters
+	//Constructor with parameters
 	public Employee(String fn, String ln, String title, float sal){
 	/*   Salary = sal;  //not a good way to assign, doesnt set or get the variables.
 	   					//bypasses current set
 	   firstName = fn;
-		
 	   lastName = ln;
-		
 	   jobTitle = title;*/
+		
 		setSalary(sal);
 		setFirstName(fn);
 		setLastName(ln);
@@ -43,8 +36,7 @@ public class Employee { // we are calling the main elsewhere
 		//go create another object in the main
 	}
 	
-	
-	
+		
 	public float getSalary() {
 		return Salary;
 	}
@@ -83,10 +75,9 @@ public class Employee { // we are calling the main elsewhere
 		return firstName; //if you don't want this seen from the outside, delete the get
 	}
 
-	
 	public void printName()
 	{ //method
-		System.out.println(lastName + ", " + firstName + ": " + jobTitle);	
+		System.out.println(lastName + ", " + firstName + ": " + jobTitle + " "+ dateHired);	
 	}	
 
 }
